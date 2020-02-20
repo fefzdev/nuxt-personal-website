@@ -1,0 +1,41 @@
+{
+  "heroSection": {
+    "hello": "Hello !",
+    "title": "Candidature pour une alternance de Développeur Web",
+    "description": "Je suis Félix, 20 ans, passionné de Développement Web et curieux de Design.",
+    "intro": "Enjoy ✌"
+  },
+  "storiesSection": {
+    "title": "D'où je viens ?",
+    "description": "J’ai un parcours relativement classique : je suis né comme beaucoup dans une ville que je ne connais pas, j’ai grandi à Saint Nazaire, et je sillone depuis près de deux ans les rues de Bordeaux sur mon vélo.",
+    "stories": {
+      "ecv-digital": {
+        "title": "ECV Digital bachelor chef de projet digital",
+        "content": [
+          "En parallèle je suis rentré à l’ECV Digital, où j’apprends le Marketing, le Design et où je me découvre chaque jour une réelle passion pour le Développement Web tant ce domaine est vaste et intéressant !"
+        ],
+        "illustration": "function_illustration",
+        "altIllustration": "Illustration de fonctions"
+      },
+      "ipika": {
+        "title": "Stage d’intégration web chez Ipika",
+        "content": [
+          "Une expérience trop courte pour un premier stage, mais très enrichissante aussi bien sur le plan humain qu’en matière d’intégration web. J’ai eu l’occasion d’y travailler durant 2 mois à partir de Juillet 2017.",
+          "J’ai appris énormément de choses telles que Less, BEM et l’environnement Drupal 8, mais également à quel point la cohésion de groupe est importante au sein d’une entreprise, ce pourquoi je recherche une agence avec une Team bien soudée. 😉"
+        ],
+        "illustration": "notification_illustration",
+        "altIllustration": "Illustration de notifications"
+      },
+      "Jocus": {
+        "title": "Stage de développeur Front End chez Jocus",
+        "content": [
+          "Pour mon stage de deuxième année, j’ai eu l’occasion de rejoindre l’équipe de Jocus pour une durée de 3 mois à partir d’Avril 2018.",
+          "J’ai d’emblée été plongé dans l’univers Prestashop afin de travailler sur la résolution de bugs, et ai appris à maitriser des librairies d'animations JavaScript afin de les intégrer à mes travaux.",
+          "Cette expérience m’a également permis d’acquérir une réelle autonomie dans mon travail, et j’ai pu réaliser à quel point la communication ainsi que l’organisation sont des éléments clefs au bon fonctionnement d’une entreprise. 🔑"
+        ],
+        "illustration": "organisation_illustration",
+        "altIllustration": "Illustration d'organisation"
+      }
+    }
+  }
+}
