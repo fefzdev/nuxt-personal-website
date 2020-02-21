@@ -19,7 +19,32 @@
 
 <script>
 export default {
+  mounted () {
+    const resizeEvent = () => {
+      return window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight
+    }
 
+    const hero = document.querySelector('.hero')
+    const inner = document.querySelector('.inner--hero')
+
+    const parralax = (element, speed) => {
+      const topPage = window.pageYOffset
+      const bottomParallaxElement = element.scrollHeight
+      const pourcent = (topPage * 100 / bottomParallaxElement) / speed * -1
+      const containerEnd = hero.offsetTop + hero.clientHeight
+
+      if (resizeEvent() > 600 && topPage < containerEnd) {
+        element.style.top = 'calc(' + topPage + 'px + ' + pourcent + '%)'
+      } else {
+        element.style.top = ''
+      }
+    }
+
+    window.onscroll = () => parralax(inner, 5)
+    window.onresize = () => parralax(inner, 5)
+  }
 }
 </script>
 
