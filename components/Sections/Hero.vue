@@ -23,6 +23,7 @@ export default {}
 
 <style lang="scss" scoped>
 .hero {
+  z-index: -1;
   position: relative;
   display: flex;
   width: 100%;
