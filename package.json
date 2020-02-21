@@ -1,7 +1,7 @@
 {
-  "name": "upToNuxt",
+  "name": "nuxt-personal-website-project",
   "version": "1.0.0",
-  "description": "My dazzling Nuxt.js project",
+  "description": "Personal website of Félix Bouveret, a french front-end web developper.",
   "author": "Félix Bouveret",
   "private": true,
   "scripts": {
