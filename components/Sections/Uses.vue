@@ -86,6 +86,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.uses {
+  .intro .section_desc {
+    margin-bottom: 50px;
+  }
+}
+
 .windows_container {
   display: flex;
   justify-content: space-around;
