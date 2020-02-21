@@ -8,6 +8,7 @@
   "storiesSection": {
     "title": "D'où je viens ?",
     "description": "J’ai un parcours relativement classique : je suis né comme beaucoup dans une ville que je ne connais pas, j’ai grandi à Saint Nazaire, et je sillone depuis près de deux ans les rues de Bordeaux sur mon vélo.",
+    
     "stories": {
       "ecv-digital": {
         "title": "ECV Digital bachelor chef de projet digital",
@@ -17,6 +18,7 @@
         "illustration": "function_illustration",
         "altIllustration": "Illustration de fonctions"
       },
+
       "ipika": {
         "title": "Stage d’intégration web chez Ipika",
         "content": [
@@ -26,6 +28,7 @@
         "illustration": "notification_illustration",
         "altIllustration": "Illustration de notifications"
       },
+
       "Jocus": {
         "title": "Stage de développeur Front End chez Jocus",
         "content": [
@@ -35,6 +38,174 @@
         ],
         "illustration": "organisation_illustration",
         "altIllustration": "Illustration d'organisation"
+      }
+    }
+  },
+
+  "likesSection":{
+    "title": "Ce que j'aime ?",
+
+    "likes": {
+      "dev": {
+        "title": "Développer",
+        "description": "J’aime bien évidemment développer des sites internet et sublimer les créations des designers.",
+        "image": "code-icon",
+        "imageAlt": "Icon de code"
+      },
+
+      "work": {
+        "title": "Le travail bien fait",
+        "description": "J’accorde énormément d’importance au <span lang=\"en\">pixel-perfect</span> et je m’efforce toujours de fournir un travail propre et concis afin de faciliter la collaboration entre développeurs.",
+        "image": "work-icon",
+        "imageAlt": "Icon de travail"
+      },
+      
+      "life": {
+        "title": "La vie",
+        "description": "Je me passionne également pour mon vélo fait de pièces détachées, j’ai un penchant pour la musique et une obsession pour Queen depuis peu.",
+        "image": "life-icon",
+        "imageAlt": "Icon de vie"
+      }
+    }
+  },
+
+  "usesSection": {
+    "title": "Ce que j’utilise ?",
+    "description": "Mes outils, mes références et mes compétences.",
+
+    "windows": {
+      "competences": {
+        "title": "competences",
+        "list": [
+          "HTML5",
+          "CSS3",
+          "LESS / SASS",
+          "JavaScript",
+          "Jquery",
+          "PHP",
+          "BEM",
+          "PugJS",
+          "VueJS"
+        ],
+        "info": "//Je sais aussi parler anglais grâce à une consommation bien trop excessive du catalogue Netflix et je sais même faire de très jolis gâteaux."
+      },
+      "references": {
+        "title": "references",
+        "list": [
+          "Grafikart",
+          "Dribbble",
+          "Openclassroom",
+          "Awwwards",
+          "Pages",
+          "Resource cards"
+        ],
+        "info": ""
+      },
+      "outils": {
+        "title": "outils",
+        "comment": "",
+        "var": "",
+        "list": [
+          "InVision",
+          "Adobe",
+          "Figma",
+          "Visual Studio Code",
+          "Git",
+          "Atom",
+          "Mamp"
+        ],
+        "info": ""
+      }
+    },
+
+    "logoList": {
+      "git": {
+        "image": "git.png",
+        "imageAlt": "Git logo"
+      },
+      "dribbble": {
+        "image": "dribbble.png",
+        "imageAlt": "Dribbble logo"
+      },
+      "visual_studio": {
+        "image": "visual_studio.png",
+        "imageAlt": "Visual studio code logo"
+      },
+      "figma": {
+        "image": "figma.png",
+        "imageAlt": "Figma logo"
+      },
+      "awwwards": {
+        "image": "awwwards.png",
+        "imageAlt": "Awwwards logo"
+      },
+      "invision": {
+        "image": "invision.png",
+        "imageAlt": "Invision logo"
+      }
+    }
+  },
+
+  "presentSection": {
+    "title": "Ce que j'aime ?",
+    "description": "Passionné et Optimiste sont mes deuxièmes prénoms, ma curiosité me pousse sans cesse à apprendre et expérimenter de nouvelles choses, et ma détermination à les accomplir."
+  },
+  "capitalSection": {
+    "elements": {
+      "meToYou": {
+        "title": "Ce que vous pouvez m’apporter",
+        "descriptions": [
+          "Travailler pour vous serait l’occasion pour moi de consolider mes connaissances, de gagner en compétences et en expérience dans un domaine qui me passionne tout en étant entouré de personnes et de projets inspirants !"
+        ],
+        "subTitle": "Vous pour moi",
+        "list": [
+          {
+            "desc": "Consolider mes connaissances",
+            "check": true
+          },
+          {
+            "desc": "Gagner en compétences",
+            "check": true
+          },
+          {
+            "desc": "Gagner en expérience",
+            "check": true
+          },
+          {
+            "desc": "Devenir gymnaste",
+            "check": false
+          },
+          {
+            "desc": "Être entouré de personnes inspirantes",
+            "check": true
+          }
+        ]
+      },
+      "youToMe": {
+        "title": "Ce que je peux vous apporter",
+        "descriptions": [
+          "M’accueillir au sein de votre équipe, c’est non seulement l’occasion pour vous d’alléger votre charge de travail en me confiant des missions que je réaliserai avec détermination. Mais également la possibilité de contribuer au développement personnel et professionnel d’un étudiant méticuleux, souriant et profondément investi.",
+          "Alors, à bientôt peut-être ? 😉"
+        ],
+        "subTitle": "Vous pour moi",
+        "list": [
+          {
+            "desc": "Une nouvelle tête au sein de votre équipe",
+            "check": true
+          },
+          {
+            "desc": "Faire des photocopies",
+            "check": false
+          },
+          {
+            "desc": "Un étudiant méticuleux, souriant et profondément investi",
+            "check": true
+          },
+          {
+            "desc": "Un travail appliqué",
+            "check": true
+          }
+        ]
       }
     }
   }
