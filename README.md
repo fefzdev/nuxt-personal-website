@@ -1,6 +1,6 @@
 # upToNuxt
 
-> My dazzling Nuxt.js project
+> Personal website of Félix Bouveret, a french front-end web developper.
 
 ## Build Setup
 

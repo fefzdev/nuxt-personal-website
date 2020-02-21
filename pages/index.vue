@@ -65,7 +65,7 @@ export default {
       const pourcent = (topPage * 100 / bottomParallaxElement) / speed * -1
       const containerEnd = hero.offsetTop + hero.clientHeight
 
-      if (resizeEvent() > 600 && topPage < containerEnd) {
+      if (resizeEvent() > 600 && topPage < containerEnd && window.innerWidth > 500) {
         element.style.top = 'calc(' + topPage + 'px + ' + pourcent + '%)'
       } else {
         element.style.top = ''
