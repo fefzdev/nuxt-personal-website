@@ -1,5 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul,
+li,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+/* COMMON */
+body {
+  background: #f6f6f6;
+  font-family: "SF-Pro-Display", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
 .inner {
-  max-width: 1200px;
+  max-width: 1180px;
   width: 95%;
   margin: auto;
+  padding: 100px 0;
+}
+
+.wrapper {
+  transition: ease 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+section:last-child {
+  padding-bottom: 100px;
+}
+
+.fadeIn {
+  transition: ease 0.8s;
+}
+
+h1 {
+  font-size: 4.4em;
+}
+
+h2 {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 2.6em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+p.section_desc {
+  max-width: 850px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.75em;
+  line-height: 1.45em;
+}
+
+p.section_content {
+  font-size: 1.5em;
+}
+
+.blk_bgr {
+  background: #000;
+  color: #fff;
+}
+
+.wht_bgr {
+  background: #f6f6f6;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 900px) {
+  .inner {
+    padding: 50px 0;
+  }
 }
