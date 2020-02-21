@@ -13,9 +13,9 @@
         <div
           v-for="(story, index) in stories"
           :key="index"
-          class="content__element fadeIn"
+          class="element fadeIn"
         >
-          <div class="content__element__desc">
+          <div class="desc">
             <h3>{{ story.title }}</h3>
             <p
               v-for="(paragraph, paraId) in story.content"
@@ -24,6 +24,8 @@
             >
               {{ paragraph }}
             </p>
+          </div>
+          <div class="view">
             <img :src="require(`~/assets/images/illustrations/${story.illustration}.png`)" :alt="story.altIllustration">
           </div>
         </div>
@@ -43,54 +45,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .story {
-  background-color: black;
-  color: white;
-  padding: 50px 0;
-}
-.intro {
-  margin-bottom: 130px;
-}
 
-.content__element {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 90px;
-  align-items: center;
-}
-.content__element.jocus .content__element__view img, .content__element.ipika .content__element__view img {
-  width: 80%;
-  margin: auto;
-}
-.content__element:nth-child(2n) {
-  flex-direction: row-reverse;
-}
-.content__element:last-child {
-  margin-bottom: 0;
-}
-.content__element__desc {
-  width: 45%;
-}
-.content__element__desc h3 {
-  width: 85%;
-  margin-bottom: 30px;
-}
-.content__element__desc p {
-  opacity: 0.7;
-  line-height: 1.48em;
-  margin-bottom: 30px;
-}
-.content__element__desc p:last-child {
-  margin-bottom: 0;
-}
+  .intro {
+    margin-bottom: 130px;
+  }
 
-.content__element__view {
-  width: 45%;
-}
-.content__element__view img {
-  width: 100%;
-  height: auto;
-  display: block;
+  .content {
+    .element {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 90px;
+      align-items: center;
+
+      @media only screen and (min-width: 1px) and (max-width: 900px) {
+        flex-direction: column!important;
+      }
+
+      &.jocus .view img,
+      &.ipika .view img {
+        width: 80%;
+        margin: auto;
+      }
+
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .desc {
+        width: 45%;
+
+        @media only screen and (min-width: 1px) and (max-width: 900px) {
+          margin-bottom: 30px;
+          width: 100%;
+        }
+
+        h3 {
+          width: 85%;
+          margin-bottom: 30px;
+        }
+
+        p {
+          font-size: 1.5em;
+          opacity: 0.7;
+          line-height: 1.48em;
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .view {
+        width: 90%;
+
+        @media (min-width: 600px) {
+          width: 80%;
+        }
+
+        @media (min-width: 900px) {
+          width: 45%;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+    }
+  }
 }
 </style>
