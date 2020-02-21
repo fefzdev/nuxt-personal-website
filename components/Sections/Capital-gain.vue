@@ -1,7 +1,6 @@
 <template>
   <section class="capital_gain blk_bgr">
     <div class="inner">
-
       <div
         v-for="(element, elementIndex) in capitalElements"
         :key="elementIndex"
@@ -17,8 +16,8 @@
             {{ description }}
           </p>
         </div>
-        <div class="view checkFadeIn1">
-          <div class="bgr"></div>
+        <div class="view checkFadeIn">
+          <div class="bgr" />
           <div class="content">
             <h3>{{ element.subTitle }}</h3>
             <ul class="list">
@@ -209,19 +208,6 @@ export default {
                 left: 50%;
                 transition: transform .3s;
               }
-
-              &.check-animate {
-
-                &::before {
-                  transform: translate(-50%, -50%) scale(1);
-                }
-
-                svg {
-                  stroke-dasharray: 0, 1000;
-                  animation: svgCheckAnim 0.3s ease-out forwards;
-                  animation-delay: 0.3s;
-                }
-              }
             }
           }
         }
@@ -231,6 +217,7 @@ export default {
         .content .list {
           @for $spanNumber from 1 through 5 {
             .need-check:nth-child(#{$spanNumber}) span {
+              animation: shadowAnimation 0.3s 0.3s * $spanNumber;
 
               &::before {
                 transform: translate(-50%, -50%) scale(1);
@@ -239,7 +226,7 @@ export default {
 
               svg {
                 stroke-dasharray: 0, 1000;
-                animation: svgCheckAnim 0.3s ease-out forwards;
+                animation: svgCheckAnimation 0.3s ease-out forwards;
                 animation-delay: 0.3s * $spanNumber + .2s;
               }
             }
@@ -254,12 +241,20 @@ export default {
   }
 }
 
-@keyframes svgCheckAnim {
+@keyframes svgCheckAnimation {
   0% {
     stroke-dasharray: 0, 1000;
   }
   to {
     stroke-dasharray: 20, 1000;
+  }
+}
+@keyframes shadowAnimation {
+  from {
+    box-shadow: 0 0 0 0 white, 0 0 0 4px #0099FF;
+  }
+  to {
+    box-shadow: 0 0 0 6px white ,0 0 0 6px #0099FF;
   }
 }
 
