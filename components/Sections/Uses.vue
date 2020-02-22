@@ -87,8 +87,13 @@ export default {
 
 <style lang="scss" scoped>
 .uses {
-  .intro .section_desc {
-    margin-bottom: 50px;
+  .intro {
+    h2 {
+      margin-bottom: 42px;
+    }
+    .section_desc {
+      margin-bottom: 50px;
+    }
   }
 }
 

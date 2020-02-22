@@ -16,6 +16,9 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  margin-bottom: 42px;
+}
 .presentation {
   .section_desc {
     margin-bottom: 40px;
