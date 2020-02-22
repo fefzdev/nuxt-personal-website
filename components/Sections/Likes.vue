@@ -64,6 +64,7 @@ export default {
       img {
         width: 32px;
         height: 32px;
+        margin-bottom: 10px;
       }
 
       h4 {
