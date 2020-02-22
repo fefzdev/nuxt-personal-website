@@ -18,15 +18,18 @@ export default {}
   text-decoration: none;
   color: #fff;
   background: url(~assets/images/bgr_mamie.gif) center 44% / cover no-repeat black;
+
   &:hover .title, &:focus .title {
     text-decoration: underline;
   }
+
   @media (min-width: 720px) {
     outline: 0;
     &:hover .title, &:focus .title {
       background-color: rgba(0, 0, 0, .7);
     }
   }
+
   .title {
     padding: 160px 0;
     background: rgba(0, 0, 0, .7);
