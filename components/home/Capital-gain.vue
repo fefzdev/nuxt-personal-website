@@ -29,7 +29,7 @@
               >
                 {{ item.desc }}
                 <span class="check">
-                  <img svg-inline src="~/assets/images/icons/check.svg" alt="check icon">
+                  <img svg-inline src="assets/images/icons/check.svg" alt="check icon">
                 </span>
               </li>
             </ul>

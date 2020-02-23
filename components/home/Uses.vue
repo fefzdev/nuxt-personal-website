@@ -65,7 +65,7 @@
               :key="logoIndex"
               class="item"
             >
-              <img :src="require(`~/assets/images/software_logos/${logo.image}`)" :alt="logo.imageAlt" class="item__img">
+              <img :src="require(`assets/images/software_logos/${logo.image}`)" :alt="logo.imageAlt" class="item__img">
             </li>
           </ul>
         </div>
@@ -212,7 +212,7 @@ export default {
         }
 
         .comments {
-          color: #ffffff50;
+          color: #ffffff80;
           font-style: italic;
         }
 

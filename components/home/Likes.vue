@@ -8,7 +8,7 @@
           :key="likeIndex"
           class="element love_dev fadeIn"
         >
-          <img :src="require(`~/assets/images/icons/${like.image}.svg`)" :alt="like.imageAlt">
+          <img :src="require(`assets/images/icons/${like.image}.svg`)" :alt="like.imageAlt">
           <h4>{{ like.title }}</h4>
           <!-- eslint-disable-next-line -->
           <p v-html="like.description" />

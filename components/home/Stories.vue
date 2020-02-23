@@ -26,7 +26,7 @@
             </p>
           </div>
           <div class="view">
-            <img :src="require(`~/assets/images/illustrations/${story.illustration}.png`)" :alt="story.altIllustration">
+            <img :src="require(`assets/images/illustrations/${story.illustration}.png`)" :alt="story.altIllustration">
           </div>
         </div>
       </div>
