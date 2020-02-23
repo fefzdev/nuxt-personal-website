@@ -16,22 +16,30 @@ export default {}
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 3.1em;
-  line-height: 1.23em;
   color: #fff;
   background: url(~assets/images/bgr_mamie.gif) center 44% / cover no-repeat black;
 
+  &:hover .title, &:focus .title {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 720px) {
+    outline: 0;
+    &:hover .title, &:focus .title {
+      background-color: rgba(0, 0, 0, .7);
+    }
+  }
+
   .title {
     padding: 160px 0;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, .7);
     transition: all 0.3s;
+    line-height: 1.23em;
+    font-size: 8vw;
 
-    @media only screen and (min-width: 1px) and (max-width: 900px) {
-      font-size: 8vw;
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, .7);
+    @media (min-width: 720px) {
+      font-size: 3.1em;
+      background: rgba(0, 0, 0, 1);
     }
   }
 }

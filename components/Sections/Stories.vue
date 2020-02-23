@@ -48,7 +48,13 @@ export default {
 .story {
 
   .intro {
+    max-width: 850px;
+    margin: auto;
     margin-bottom: 130px;
+
+    h2 {
+      margin-bottom: 42px;
+    }
   }
 
   .content {
