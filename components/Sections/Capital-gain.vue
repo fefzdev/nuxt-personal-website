@@ -268,7 +268,7 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background-color: #fff;
     border-radius: 5px;
     left: 26px;
     top: 25px;
