@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .hello {
+  padding-top: 64px;
   .inner {
     text-align: center;
     max-width: 700px;
