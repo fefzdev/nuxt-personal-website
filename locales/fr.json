@@ -1,4 +1,8 @@
 {
+  "navigation": {
+    "homePage": "Accueil",
+    "freelance": "Freelance"
+  },
   "heroSection": {
     "hello": "Hello !",
     "title": "Candidature pour une alternance de Développeur Web",
@@ -208,5 +212,11 @@
         ]
       }
     }
+  },
+  "freelance": {
+    "title": "Recrutez moi en tant que freelance !",
+    "description": "Si vous êtes arrivés jusqu'ici vous devez sûrement savoir qui je suis et de quoi je suis capable ! Si non, vous pouvez suivre {link} vers une page qui vous en dira un peu plus sur moi. 😉",
+    "linkDescription": "ce lien",
+    "contactMe":  "Dans le cas où mes services vous seraient utiles, je vous invite à me contacter à l'aide du mail juste en dessous, je vous répondrai au plus vite. 🙌"
   }
 }

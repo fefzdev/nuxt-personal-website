@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navigation />
     <hero-section />
     <stories-section />
     <likes-section />
@@ -11,16 +12,18 @@
 </template>
 
 <script>
-import HeroSection from '~/components/Sections/Hero'
-import StoriesSection from '~/components/Sections/Stories'
-import LikesSection from '~/components/Sections/Likes'
-import UsesSection from '~/components/Sections/Uses'
-import PresSection from '~/components/Sections/Presentation'
-import CapitalSection from '~/components/Sections/Capital-gain'
-import Mamy from '~/components/Sections/Mamy'
+import Navigation from '~/components/commons/navigation'
+import HeroSection from '~/components/home/Hero'
+import StoriesSection from '~/components/home/Stories'
+import LikesSection from '~/components/home/Likes'
+import UsesSection from '~/components/home/Uses'
+import PresSection from '~/components/home/Presentation'
+import CapitalSection from '~/components/home/Capital-gain'
+import Mamy from '~/components/home/Mamy'
 
 export default {
   components: {
+    Navigation,
     HeroSection,
     StoriesSection,
     LikesSection,

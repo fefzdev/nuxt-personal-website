@@ -50,7 +50,7 @@ export default {
   modules: [
     ['nuxt-i18n', {
       locales: [
-        { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
+        // { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
         { code: 'fr', name: 'Français', iso: 'fr-FR',  file: 'fr.json' },
       ],
       defaultLocale: 'fr',
