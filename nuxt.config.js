@@ -48,18 +48,25 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['nuxt-i18n', {
-      locales: [
-        // { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
-        { code: 'fr', name: 'Français', iso: 'fr-FR',  file: 'fr.json' },
-      ],
-      defaultLocale: 'fr',
-      lazy: true,
-      langDir: 'locales/',
-      strategy: 'prefix_and_default', // 'prefix_and_default', // add locale prefix for every locale
-    }],
+    [
+      'nuxt-i18n', {
+        locales: [
+          // { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' },
+          { code: 'fr', name: 'Français', iso: 'fr-FR',  file: 'fr.json' },
+        ],
+        defaultLocale: 'fr',
+        lazy: true,
+        langDir: 'locales/',
+        strategy: 'prefix_and_default', // 'prefix_and_default', // add locale prefix for every locale
+      }
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
+  ],
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-132457478-2'
+    }]
   ],
   /*
   ** Axios module configuration
