@@ -212,7 +212,7 @@ export default {
         }
 
         .comments {
-          color: #ffffff50;
+          color: #ffffff7a;
           font-style: italic;
         }
 

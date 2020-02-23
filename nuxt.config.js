@@ -58,7 +58,29 @@ export default {
         lazy: true,
         langDir: 'locales/',
         strategy: 'prefix_and_default', // 'prefix_and_default', // add locale prefix for every locale
-      }
+      },
+      ['nuxt-lazy-load', {
+        // These are the default values
+        images: true,
+        videos: true,
+        audios: true,
+        iframes: true,
+        polyfill: true,
+        directiveOnly: false,
+        
+        // Default image must be in the static folder
+        defaultImage: '/images/default-image.jpg',
+     
+        // To remove class set value to false
+        loadedClass: 'isLoaded',
+        appendClass: 'lazyLoad',
+        
+        observerConfig: {
+          rootMargin: '50px 0px 50px 0px',
+          threshold: 0
+          // See IntersectionObserver documentation
+        }
+      }]
     ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
