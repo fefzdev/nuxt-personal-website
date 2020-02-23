@@ -107,7 +107,7 @@ export default {
     width: 330px;
     height: 100%;
     min-height: 380px;
-    background: #1c1c1c;
+    background-color: #1c1c1c;
     margin: 0 1em 30px;
     border-radius: 5px;
     transition: ease 0.3s;
@@ -120,7 +120,7 @@ export default {
       width: 100%;
       height: 35px;
       position: relative;
-      background: #222222;
+      background-color: #222222;
       border-radius: 5px 5px 0 0;
 
       .title {
@@ -151,15 +151,15 @@ export default {
           }
 
           &:nth-child(1) {
-            background: #fc605c;
+            background-color: #fc605c;
           }
 
           &:nth-child(2) {
-            background: #fdbc40;
+            background-color: #fdbc40;
           }
 
           &:nth-child(3) {
-            background: #35c94a;
+            background-color: #35c94a;
           }
         }
       }

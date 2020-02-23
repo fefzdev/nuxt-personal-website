@@ -32,14 +32,14 @@ export default {}
 
   .title {
     padding: 160px 0;
-    background: rgba(0, 0, 0, .7);
-    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, .7);
+    transition: background-color 0.3s;
     line-height: 1.23em;
     font-size: 8vw;
 
     @media (min-width: 720px) {
       font-size: 3.1em;
-      background: rgba(0, 0, 0, 1);
+      background-color: rgba(0, 0, 0, 1);
     }
   }
 }
