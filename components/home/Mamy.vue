@@ -17,7 +17,7 @@ export default {}
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background: url(~assets/images/bgr_mamie.gif) center 44% / cover no-repeat black;
+  background: url(~assets/images/bgr_mamie.webp) center 44% / cover no-repeat black;
 
   &:hover .title, &:focus .title {
     text-decoration: underline;
