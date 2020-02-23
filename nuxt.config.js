@@ -58,7 +58,8 @@ export default {
         lazy: true,
         langDir: 'locales/',
         strategy: 'prefix_and_default', // 'prefix_and_default', // add locale prefix for every locale
-      }
+      },
+      'nuxt-lazy-load'
     ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
