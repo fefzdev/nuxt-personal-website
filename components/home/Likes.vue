@@ -1,14 +1,18 @@
 <template>
   <section class="likes blk_bgr">
     <div class="inner">
-      <h2>{{ $t('likesSection.title') }}</h2>
+      <h2>{{ $t("likesSection.title") }}</h2>
       <div class="content">
         <article
           v-for="(like, likeIndex) in likes"
           :key="likeIndex"
           class="element love_dev fadeIn"
         >
-          <img :src="require(`~/assets/images/icons/${like.image}.svg`)" :alt="like.imageAlt">
+          <img
+            loading="lazy"
+            :src="require(`~/assets/images/icons/${like.image}.svg`)"
+            :alt="like.imageAlt"
+          />
           <h4>{{ like.title }}</h4>
           <!-- eslint-disable-next-line -->
           <p v-html="like.description" />
@@ -20,12 +24,12 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      likes: this.$t('likesSection.likes')
-    }
+      likes: this.$t("likesSection.likes")
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

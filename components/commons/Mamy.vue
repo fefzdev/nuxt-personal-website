@@ -1,14 +1,16 @@
 <template>
-  <a href="mailto:bouveret.felix@gmail.com" class="contact">
-    <div class="title">
-      <p lang="en">Let's talk</p>
-      <p>bouveret.felix@gmail.com</p>
-    </div>
-  </a>
+  <footer>
+    <a href="mailto:bouveret.felix@gmail.com" class="contact">
+      <div class="title">
+        <p lang="en">Let's talk</p>
+        <p>bouveret.felix@gmail.com</p>
+      </div>
+    </a>
+  </footer>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -17,22 +19,25 @@ export default {}
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background: url(~assets/images/bgr_mamie.webp) center 44% / cover no-repeat black;
+  background: url(~assets/images/bgr_mamie.webp) center 44% / cover no-repeat
+    black;
 
-  &:hover .title, &:focus .title {
+  &:hover .title,
+  &:focus .title {
     text-decoration: underline;
   }
 
   @media (min-width: 720px) {
     outline: 0;
-    &:hover .title, &:focus .title {
-      background-color: rgba(0, 0, 0, .7);
+    &:hover .title,
+    &:focus .title {
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 
   .title {
     padding: 160px 0;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     transition: background-color 0.3s;
     line-height: 1.23em;
     font-size: 8vw;
