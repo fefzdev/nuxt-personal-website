@@ -3,10 +3,10 @@
     <div class="inner">
       <div class="intro">
         <h2>
-          {{ $t('storiesSection.title') }}
+          {{ $t("storiesSection.title") }}
         </h2>
         <p class="section-description fadeIn">
-          {{ $t('storiesSection.description') }}
+          {{ $t("storiesSection.description") }}
         </p>
       </div>
       <div class="content">
@@ -26,7 +26,13 @@
             </p>
           </div>
           <div class="view">
-            <img :src="require(`~/assets/images/illustrations/${story.illustration}.png`)" :alt="story.altIllustration">
+            <img
+              loading="lazy"
+              :src="
+                require(`~/assets/images/illustrations/${story.illustration}.png`)
+              "
+              :alt="story.altIllustration"
+            />
           </div>
         </div>
       </div>
@@ -36,17 +42,16 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      stories: this.$t('storiesSection.stories')
-    }
+      stories: this.$t("storiesSection.stories")
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .story {
-
   .intro {
     max-width: 850px;
     margin: auto;
@@ -65,7 +70,7 @@ export default {
       align-items: center;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
-        flex-direction: column!important;
+        flex-direction: column !important;
       }
 
       &.jocus .view img,

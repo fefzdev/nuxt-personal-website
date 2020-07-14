@@ -2,9 +2,9 @@
   <section class="uses blk_bgr">
     <div class="inner">
       <div class="intro">
-        <h2>{{ $t('usesSection.title') }}</h2>
+        <h2>{{ $t("usesSection.title") }}</h2>
         <p class="section_desc fadeIn">
-          {{ $t('usesSection.description') }}
+          {{ $t("usesSection.description") }}
         </p>
       </div>
       <div class="content">
@@ -20,9 +20,7 @@
                 <span />
                 <span />
               </div>
-              <p class="title">
-                {{ window.title }}.html
-              </p>
+              <p class="title">{{ window.title }}.html</p>
             </div>
             <div class="content">
               <div class="lines">
@@ -32,13 +30,9 @@
               </div>
               <div class="text">
                 <span class="script_bls">script</span>
-                <p class="comments">
-                  //--------{{ window.title }}------------
-                </p>
+                <p class="comments">//--------{{ window.title }}------------</p>
                 <div class="infos">
-                  <p>
-                    <span>var </span>{{ window.title }}
-                  </p>
+                  <p><span>var </span>{{ window.title }}</p>
                   <ul class="info_list">
                     <li
                       v-for="(item, itemIndex) in window.list"
@@ -65,7 +59,12 @@
               :key="logoIndex"
               class="item"
             >
-              <img :src="require(`~/assets/images/software_logos/${logo.image}`)" :alt="logo.imageAlt" class="item__img">
+              <img
+                loading="lazy"
+                :src="require(`~/assets/images/software_logos/${logo.image}`)"
+                :alt="logo.imageAlt"
+                class="item__img"
+              />
             </li>
           </ul>
         </div>
@@ -76,13 +75,13 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      windows: this.$t('usesSection.windows'),
-      logoList: this.$t('usesSection.logoList')
-    }
+      windows: this.$t("usesSection.windows"),
+      logoList: this.$t("usesSection.logoList")
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

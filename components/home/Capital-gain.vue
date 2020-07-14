@@ -29,7 +29,12 @@
               >
                 {{ item.desc }}
                 <span class="check">
-                  <img svg-inline src="~/assets/images/icons/check.svg" alt="check icon">
+                  <img
+                    loading="lazy"
+                    svg-inline
+                    src="~/assets/images/icons/check.svg"
+                    alt="check icon"
+                  />
                 </span>
               </li>
             </ul>
@@ -42,12 +47,12 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      capitalElements: this.$t('capitalSection.elements')
-    }
+      capitalElements: this.$t("capitalSection.elements")
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -198,15 +203,15 @@ export default {
               }
 
               &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 24px;
                 height: 24px;
-                background-color: #0099FF;
+                background-color: #0099ff;
                 transform: translate(-50%, -50%) scale(0);
                 top: 50%;
                 left: 50%;
-                transition: transform .3s;
+                transition: transform 0.3s;
               }
             }
           }
@@ -221,20 +226,20 @@ export default {
 
               &::before {
                 transform: translate(-50%, -50%) scale(1);
-                transition-delay: 0.3s*$spanNumber;
+                transition-delay: 0.3s * $spanNumber;
               }
 
               svg {
                 stroke-dasharray: 0, 1000;
                 animation: svgCheckAnimation 0.3s ease-out forwards;
-                animation-delay: 0.3s * $spanNumber + .2s;
+                animation-delay: 0.3s * $spanNumber + 0.2s;
               }
             }
           }
         }
 
         .content .list .item.item--unchecked span::before {
-          content:none;
+          content: none;
         }
       }
     }
@@ -251,10 +256,10 @@ export default {
 }
 @keyframes shadowAnimation {
   from {
-    box-shadow: 0 0 0 0 white, 0 0 0 4px #0099FF;
+    box-shadow: 0 0 0 0 white, 0 0 0 4px #0099ff;
   }
   to {
-    box-shadow: 0 0 0 6px white ,0 0 0 6px #0099FF;
+    box-shadow: 0 0 0 6px white, 0 0 0 6px #0099ff;
   }
 }
 
@@ -263,7 +268,8 @@ export default {
   position: absolute;
   z-index: 0;
   height: 100%;
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     width: 100%;

@@ -1,41 +1,24 @@
 <template>
   <main class="freelance">
-    <navigation />
     <section class="hello">
       <div class="inner">
         <h1>
-          {{ $t('freelance.title') }}
+          {{ $t("freelance.title") }}
         </h1>
-        <i18n
-          tag="p"
-          path="freelance.description"
-        >
+        <i18n tag="p" path="freelance.description">
           <span slot="link">
             <nuxt-link to="/">
-              {{ $t('freelance.linkDescription') }}
+              {{ $t("freelance.linkDescription") }}
             </nuxt-link>
           </span>
         </i18n>
         <p>
-          {{ $t('freelance.contactMe') }}
+          {{ $t("freelance.contactMe") }}
         </p>
       </div>
     </section>
-    <mamy />
   </main>
 </template>
-
-<script>
-import Navigation from '~/components/commons/navigation'
-import Mamy from '~/components/home/Mamy'
-
-export default {
-  components: {
-    Navigation,
-    Mamy
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .hello {
@@ -60,17 +43,18 @@ export default {
         transition: color 0.2s;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
-          width: calc(100% + .1em);
+          width: calc(100% + 0.1em);
           height: 2px;
           bottom: 0;
-          left: -.1em;
+          left: -0.1em;
           background-color: black;
           transition: height 0.2s;
           z-index: -1;
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: white;
           &:after {
             height: 100%;
