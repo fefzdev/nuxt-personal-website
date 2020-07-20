@@ -3,10 +3,10 @@
     <div class="inner">
       <div class="intro">
         <h2>
-          {{ $t("storiesSection.title") }}
+          {{ $t('storiesSection.title') }}
         </h2>
         <p class="section-description fadeIn">
-          {{ $t("storiesSection.description") }}
+          {{ $t('storiesSection.description') }}
         </p>
       </div>
       <div class="content">
@@ -27,11 +27,11 @@
           </div>
           <div class="view">
             <img
-              loading="lazy"
               :src="
                 require(`~/assets/images/illustrations/${story.illustration}.png`)
               "
               :alt="story.altIllustration"
+              loading="lazy"
             />
           </div>
         </div>
@@ -44,10 +44,10 @@
 export default {
   data() {
     return {
-      stories: this.$t("storiesSection.stories")
-    };
-  }
-};
+      stories: this.$t('storiesSection.stories'),
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -65,9 +65,9 @@ export default {
   .content {
     .element {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       margin-bottom: 90px;
-      align-items: center;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
         flex-direction: column !important;
@@ -91,8 +91,8 @@ export default {
         width: 45%;
 
         @media only screen and (min-width: 1px) and (max-width: 900px) {
-          margin-bottom: 30px;
           width: 100%;
+          margin-bottom: 30px;
         }
 
         h3 {
@@ -101,10 +101,12 @@ export default {
         }
 
         p {
-          font-size: 1.5em;
-          opacity: 0.7;
-          line-height: 1.48em;
           margin-bottom: 30px;
+
+          font-size: 1.5em;
+          line-height: 1.48em;
+
+          opacity: 0.7;
 
           &:last-child {
             margin-bottom: 0;
@@ -123,9 +125,9 @@ export default {
         }
 
         img {
+          display: block;
           width: 100%;
           height: auto;
-          display: block;
         }
       }
     }

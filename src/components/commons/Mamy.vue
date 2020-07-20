@@ -10,15 +10,17 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .contact {
   display: block;
+
+  color: #fff;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+
   background: url(~assets/images/bgr_mamie.webp) center 44% / cover no-repeat
     black;
 
@@ -37,13 +39,17 @@ export default {};
 
   .title {
     padding: 160px 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s;
-    line-height: 1.23em;
+
     font-size: 8vw;
+    line-height: 1.23em;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    transition: background-color 0.3s;
 
     @media (min-width: 720px) {
       font-size: 3.1em;
+
       background-color: rgba(0, 0, 0, 1);
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <section class="presentation wht_bgr">
-    <div class="inner ">
+    <div class="inner">
       <h2>{{ $t('presentSection.title') }}</h2>
       <div class="fadeIn">
         <p class="section_desc">

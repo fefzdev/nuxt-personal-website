@@ -3,17 +3,17 @@
     <section class="hello">
       <div class="inner">
         <h1>
-          {{ $t("freelance.title") }}
+          {{ $t('freelance.title') }}
         </h1>
         <i18n tag="p" path="freelance.description">
           <span slot="link">
             <nuxt-link to="/">
-              {{ $t("freelance.linkDescription") }}
+              {{ $t('freelance.linkDescription') }}
             </nuxt-link>
           </span>
         </i18n>
         <p>
-          {{ $t("freelance.contactMe") }}
+          {{ $t('freelance.contactMe') }}
         </p>
       </div>
     </section>
@@ -24,8 +24,9 @@
 .hello {
   padding-top: 64px;
   .inner {
-    text-align: center;
     max-width: 700px;
+
+    text-align: center;
 
     h1 {
       margin-bottom: 32px;
@@ -36,22 +37,29 @@
         margin-bottom: 16px;
       }
       a {
-        outline: none;
         position: relative;
+
         color: black;
         text-decoration: none;
+
+        outline: none;
+
         transition: color 0.2s;
 
         &::after {
-          content: "";
           position: absolute;
-          width: calc(100% + 0.1em);
-          height: 2px;
           bottom: 0;
           left: -0.1em;
-          background-color: black;
-          transition: height 0.2s;
           z-index: -1;
+
+          width: calc(100% + 0.1em);
+          height: 2px;
+
+          background-color: black;
+
+          transition: height 0.2s;
+
+          content: '';
         }
         &:hover,
         &:focus {

@@ -24,8 +24,8 @@
               <li
                 v-for="(item, itemIndex) in element.list"
                 :key="itemIndex"
-                class="item"
                 :class="item.check ? 'need-check' : 'item--unchecked'"
+                class="item"
               >
                 {{ item.desc }}
                 <span class="check">
@@ -49,18 +49,18 @@
 export default {
   data() {
     return {
-      capitalElements: this.$t("capitalSection.elements")
-    };
-  }
-};
+      capitalElements: this.$t('capitalSection.elements'),
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .capital_gain {
   .element {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 130px;
 
     @media only screen and (min-width: 1px) and (max-width: 900px) {
@@ -103,9 +103,10 @@ export default {
       }
 
       h2 {
-        font-size: 3em;
-        margin-bottom: 20px;
         width: 90%;
+        margin-bottom: 20px;
+
+        font-size: 3em;
 
         @media only screen and (min-width: 1px) and (max-width: 900px) {
           width: 100%;
@@ -119,6 +120,7 @@ export default {
 
       p {
         margin-bottom: 20px;
+
         opacity: 0.7;
 
         &:last-child {
@@ -129,8 +131,9 @@ export default {
     .view {
       position: relative;
       right: 10px;
-      max-width: 380px;
+
       width: 50%;
+      max-width: 380px;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
         width: 90%;
@@ -141,10 +144,12 @@ export default {
         width: 100%;
       }
       .content {
-        height: auto;
-        padding: 40px;
         position: relative;
         z-index: 1;
+
+        height: auto;
+        padding: 40px;
+
         color: #000;
 
         @media only screen and (min-width: 1px) and (max-width: 900px) {
@@ -163,9 +168,10 @@ export default {
         }
 
         .list {
+          height: 100%;
+
           font-size: 1.5em;
           line-height: 1.1em;
-          height: 100%;
 
           @media only screen and (min-width: 1px) and (max-width: 900px) {
             font-size: 1.25em;
@@ -173,8 +179,9 @@ export default {
 
           .item {
             position: relative;
-            padding-left: 40px;
+
             margin-bottom: 30px;
+            padding-left: 40px;
 
             &:last-child {
               margin-bottom: 0;
@@ -182,20 +189,25 @@ export default {
 
             span {
               position: absolute;
+              top: 50%;
+              left: 0;
+
               width: 24px;
               height: 24px;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-              transition: ease 0.3s;
               border: solid 1px #e4e4e4;
               border-radius: 4px;
               overflow: hidden;
+
+              transform: translateY(-50%);
+
+              transition: ease 0.3s;
+
               svg {
-                transform: translate(-50%, -50%);
+                position: absolute;
                 top: 50%;
                 left: 50%;
-                position: absolute;
+
+                transform: translate(-50%, -50%);
 
                 path {
                   transform: translateY(-10%);
@@ -203,15 +215,20 @@ export default {
               }
 
               &::before {
-                content: "";
                 position: absolute;
-                width: 24px;
-                height: 24px;
-                background-color: #0099ff;
-                transform: translate(-50%, -50%) scale(0);
                 top: 50%;
                 left: 50%;
+
+                width: 24px;
+                height: 24px;
+
+                background-color: #0099ff;
+
+                transform: translate(-50%, -50%) scale(0);
+
                 transition: transform 0.3s;
+
+                content: '';
               }
             }
           }
@@ -226,11 +243,13 @@ export default {
 
               &::before {
                 transform: translate(-50%, -50%) scale(1);
+
                 transition-delay: 0.3s * $spanNumber;
               }
 
               svg {
                 stroke-dasharray: 0, 1000;
+
                 animation: svgCheckAnimation 0.3s ease-out forwards;
                 animation-delay: 0.3s * $spanNumber + 0.2s;
               }
@@ -267,21 +286,27 @@ export default {
 .bgr {
   position: absolute;
   z-index: 0;
+
   height: 100%;
+
   &::before,
   &::after {
-    content: "";
     position: absolute;
+    top: 25px;
+    left: 26px;
+
     width: 100%;
     height: 100%;
-    background-color: #fff;
     border-radius: 5px;
-    left: 26px;
-    top: 25px;
+
+    background-color: #fff;
+
+    content: '';
   }
   &::after {
-    left: 0;
     top: 0;
+    left: 0;
+
     box-shadow: 0px 4px 20px #00000025;
   }
 }
