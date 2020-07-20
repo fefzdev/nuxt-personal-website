@@ -23,8 +23,9 @@ export default {}
 
 <style lang="scss" scoped>
 .hero {
-  z-index: -1;
   position: relative;
+  z-index: -1;
+
   display: flex;
   width: 100%;
   height: 100vh;
@@ -36,21 +37,24 @@ export default {}
   }
 
   .inner--hero {
-    max-width: 100vw;
-    width: 100%;
-    text-align: center;
     position: relative;
+
+    width: 100%;
+    max-width: 100vw;
     margin: auto;
+
+    text-align: center;
 
     > * {
       margin: 0 auto;
     }
 
     p {
-      font-size: 1.7em;
-      max-width: 700px;
       width: 90%;
+      max-width: 700px;
       margin-bottom: 20px;
+
+      font-size: 1.7em;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
         font-size: 1.375em;
@@ -58,10 +62,11 @@ export default {}
     }
 
     .title {
-      line-height: 1.1em;
-      margin-bottom: 40px;
-      max-width: 1000px;
       width: 90%;
+      max-width: 1000px;
+      margin-bottom: 40px;
+
+      line-height: 1.1em;
     }
   }
 }

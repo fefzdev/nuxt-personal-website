@@ -1,7 +1,7 @@
 <template>
   <section class="likes blk_bgr">
     <div class="inner">
-      <h2>{{ $t("likesSection.title") }}</h2>
+      <h2>{{ $t('likesSection.title') }}</h2>
       <div class="content">
         <article
           v-for="(like, likeIndex) in likes"
@@ -9,9 +9,9 @@
           class="element love_dev fadeIn"
         >
           <img
-            loading="lazy"
             :src="require(`~/assets/images/icons/${like.image}.svg`)"
             :alt="like.imageAlt"
+            loading="lazy"
           />
           <h4>{{ like.title }}</h4>
           <!-- eslint-disable-next-line -->
@@ -26,10 +26,10 @@
 export default {
   data() {
     return {
-      likes: this.$t("likesSection.likes")
-    };
-  }
-};
+      likes: this.$t('likesSection.likes'),
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -39,18 +39,19 @@ export default {
   }
   .content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @media only screen and (min-width: 1px) and (max-width: 600px) {
       flex-direction: column;
     }
 
     .element {
-      min-width: 350px;
-      flex: 1;
-      margin: 10px 10px 0;
       position: relative;
+
+      flex: 1;
+      min-width: 350px;
+      margin: 10px 10px 0;
       padding-top: 52px;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
@@ -78,6 +79,7 @@ export default {
       p {
         font-size: 1.375em;
         line-height: 1.49em;
+
         opacity: 0.7;
       }
     }

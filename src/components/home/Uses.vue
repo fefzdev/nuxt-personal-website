@@ -2,9 +2,9 @@
   <section class="uses blk_bgr">
     <div class="inner">
       <div class="intro">
-        <h2>{{ $t("usesSection.title") }}</h2>
+        <h2>{{ $t('usesSection.title') }}</h2>
         <p class="section_desc fadeIn">
-          {{ $t("usesSection.description") }}
+          {{ $t('usesSection.description') }}
         </p>
       </div>
       <div class="content">
@@ -60,9 +60,9 @@
               class="item"
             >
               <img
-                loading="lazy"
                 :src="require(`~/assets/images/software_logos/${logo.image}`)"
                 :alt="logo.imageAlt"
+                loading="lazy"
                 class="item__img"
               />
             </li>
@@ -77,11 +77,11 @@
 export default {
   data() {
     return {
-      windows: this.$t("usesSection.windows"),
-      logoList: this.$t("usesSection.logoList")
-    };
-  }
-};
+      windows: this.$t('usesSection.windows'),
+      logoList: this.$t('usesSection.logoList'),
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -98,17 +98,19 @@ export default {
 
 .windows_container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
   margin-bottom: 30px;
 
   .window {
     width: 330px;
     height: 100%;
     min-height: 380px;
-    background-color: #1c1c1c;
     margin: 0 1em 30px;
     border-radius: 5px;
+
+    background-color: #1c1c1c;
+
     transition: ease 0.3s;
 
     &:last-child {
@@ -116,34 +118,38 @@ export default {
     }
 
     .header {
+      position: relative;
+
       width: 100%;
       height: 35px;
-      position: relative;
-      background-color: #222222;
       border-radius: 5px 5px 0 0;
 
+      background-color: #222222;
+
       .title {
-        text-align: center;
-        line-height: 35px;
-        font-size: 12px;
         color: #777777;
+        font-size: 12px;
+        line-height: 35px;
+        text-align: center;
       }
 
       .dots {
         position: absolute;
-        width: auto;
-        height: 8px;
-        transform: translateY(-50%);
         top: 50%;
         left: 10px;
+
         display: flex;
+        width: auto;
+        height: 8px;
+
+        transform: translateY(-50%);
 
         span {
+          display: block;
           width: 8px;
           height: 8px;
-          border-radius: 200px;
           margin-left: 5px;
-          display: block;
+          border-radius: 200px;
 
           &:first-child {
             margin: 0;
@@ -165,8 +171,9 @@ export default {
     }
 
     .content {
-      padding: 15px;
       display: flex;
+      padding: 15px;
+
       font-size: 16px;
       line-height: 23px;
 
@@ -183,29 +190,35 @@ export default {
         padding-left: 10px;
 
         .script_bls {
-          display: block;
-          color: #ff4a45;
           position: relative;
+
+          display: block;
           padding-left: 0.6em;
 
+          color: #ff4a45;
+
           &::before {
-            content: "<";
             position: absolute;
-            color: #ffffff90;
             left: 0;
+
+            color: #ffffff90;
+
+            content: '<';
           }
 
           &::after {
-            content: ">";
             position: absolute;
+
             color: #ffffff90;
+
+            content: '>';
           }
 
           &.script_bls--close {
             padding-left: 1em;
 
             &::before {
-              content: "</";
+              content: '</';
             }
           }
         }
@@ -219,16 +232,20 @@ export default {
           margin: 23px 0;
 
           p {
-            display: inline;
-            color: #0099ff;
             position: relative;
+
+            display: inline;
             padding-right: 1em;
 
+            color: #0099ff;
+
             &::after {
-              content: "=";
               position: absolute;
-              color: #eb70e6;
               right: 0.5em;
+
+              color: #eb70e6;
+
+              content: '=';
             }
           }
 
@@ -237,31 +254,37 @@ export default {
           }
 
           .info_list {
-            display: inline;
             position: relative;
 
+            display: inline;
+
             &::before {
-              content: "[";
               position: absolute;
+
               transform: translateX(-100%);
+
+              content: '[';
             }
 
             &::after {
-              content: "];";
               position: relative;
+
+              content: '];';
             }
 
             .item {
               display: inline;
+
               color: #98ed66;
 
               &::after {
-                content: ",";
                 color: #fff;
+
+                content: ',';
               }
 
               &:last-child::after {
-                content: "";
+                content: '';
               }
             }
           }
@@ -276,9 +299,9 @@ export default {
 
   .logo_list {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 
     .item {
       display: block;
