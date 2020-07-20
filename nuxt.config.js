@@ -26,6 +26,10 @@ export default {
         name: 'og:image',
         content: 'assets/images/og_image.png',
       },
+      {
+        name: 'robots',
+        content: process.env.IS_DEV === 'true' ? 'noindex' : 'index',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' }],
   },
