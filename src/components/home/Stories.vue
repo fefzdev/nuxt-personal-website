@@ -65,9 +65,9 @@ export default {
   .content {
     .element {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       margin-bottom: 90px;
-      align-items: center;
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
         flex-direction: column !important;
