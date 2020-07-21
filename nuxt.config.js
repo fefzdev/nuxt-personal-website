@@ -3,6 +3,11 @@ export default {
 
   srcDir: 'src/',
 
+  // Create external ip server
+  server: {
+    host: '0'
+  },
+
   /*
    ** Headers of the page
    */
