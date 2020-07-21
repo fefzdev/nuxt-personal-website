@@ -26,6 +26,7 @@ export default {
     PresSection,
     CapitalSection,
   },
+  transition: 'default',
   mounted() {
     const resizeEvent = () => {
       return (
