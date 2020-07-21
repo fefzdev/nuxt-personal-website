@@ -1,0 +1,17 @@
+$short-transition: 0.2s;
+$medium-transition: 0.3s;
+$long-transition: 0.5s;
+
+.default-enter-active,
+.default-leave-active {
+  transform: translateY(0);
+  opacity: 1;
+
+  transition: transform $long-transition, opacity $long-transition;
+}
+.default-enter,
+.default-leave-to {
+  transform: translateY(8px);
+
+  opacity: 0;
+}

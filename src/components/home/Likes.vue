@@ -13,7 +13,7 @@
             :alt="like.imageAlt"
             loading="lazy"
           />
-          <h4>{{ like.title }}</h4>
+          <h3 class="h4">{{ like.title }}</h3>
           <!-- eslint-disable-next-line -->
           <p v-html="like.description" />
         </article>
@@ -72,7 +72,7 @@ export default {
         margin-bottom: 10px;
       }
 
-      h4 {
+      .h4 {
         margin-bottom: 20px;
       }
 

@@ -1,44 +1,50 @@
 @font-face {
-  font-family: "SF-Pro-Display";
-  src: url("/SF-Pro/SF-Pro-Display-Regular.otf");
-  font-display: swap;
   font-weight: 400;
+  font-family: 'SF-Pro-Display';
+  src: url('/SF-Pro/SF-Pro-Display-Regular.otf');
+  font-display: swap;
 }
 @font-face {
-  font-family: "SF-Pro-Display";
-  src: url("/SF-Pro/SF-Pro-Display-Bold.otf");
-  font-display: swap;
   font-weight: bold;
+  font-family: 'SF-Pro-Display';
+  src: url('/SF-Pro/SF-Pro-Display-Bold.otf');
+  font-display: swap;
 }
 @font-face {
-  font-family: "SF-Pro-Display";
-  src: url("/SF-Pro/SF-Pro-Display-RegularItalic.otf");
   font-weight: 400;
-  font-display: swap;
+  font-family: 'SF-Pro-Display';
   font-style: italic;
+  src: url('/SF-Pro/SF-Pro-Display-RegularItalic.otf');
+  font-display: swap;
 }
 
-body, html {
+body,
+html {
   font-size: 16px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
+  margin-bottom: 32px;
+
   font-size: 3em;
-  margin-bottom: 32px;
   text-align: center;
 }
-h2, .h2 {
+h2,
+.h2 {
+  margin-bottom: 32px;
+
   font-size: 2.5em;
-  margin-bottom: 32px;
   text-align: center;
 }
-h3, .h3 {
+h3,
+.h3 {
   font-size: 2em;
 }
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.5em;
 }
-
 
 .section-description {
   font-size: 1.5em;
@@ -54,17 +60,21 @@ h4, .h4 {
   line-height: 140%;
 }
 
-@media(min-width: 720px) {
-  h1, .h1 {
+@media (min-width: 720px) {
+  h1,
+  .h1 {
     font-size: 4.5em;
   }
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 4em;
   }
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 2.5em;
   }
-  h4, .h4 {
+  h4,
+  .h4 {
     font-size: 1.75em;
   }
 
@@ -77,4 +87,3 @@ h4, .h4 {
     line-height: 140%;
   }
 }
-

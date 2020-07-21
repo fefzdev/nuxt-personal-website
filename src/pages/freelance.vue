@@ -22,9 +22,14 @@
 
 <style lang="scss" scoped>
 .hello {
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
   padding-top: 64px;
+
   .inner {
     max-width: 700px;
+    margin: auto;
 
     text-align: center;
 
