@@ -1,5 +1,5 @@
 <template>
-  <HomePageModule />
+  <HomePageModule :data="data" />
 </template>
 
 <script>
@@ -12,6 +12,17 @@ export default {
 
   components: {
     HomePageModule,
+  },
+
+  async asyncData({ $prismic, error }) {
+    try {
+      const data = (await $prismic.api.getSingle('homepage')).data
+      return {
+        data,
+      }
+    } catch (e) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
   },
 }
 </script>

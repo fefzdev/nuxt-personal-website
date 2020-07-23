@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Hero />
-    <Stories />
-    <Likes />
-    <Uses />
-    <Presentation />
-    <CapitalGain />
+    <Hero :data="HeroData" />
+    <Stories :data="StoriesData" />
+    <Likes :data="LikesData" />
+    <Uses :data="ToolsData" />
+    <Presentation :data="PresentationData" />
+    <CapitalGain :data="CapitalGainData" />
   </div>
 </template>
 
@@ -29,6 +29,57 @@ export default {
     Uses,
     Presentation,
     CapitalGain,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      HeroData: {
+        hello: this.data.hero_hello,
+        title: this.data.hero_title,
+        subtitle: this.data.hero_subtitle,
+        end_word: this.data.hero_end_word,
+      },
+      StoriesData: {
+        title: this.data.stories_title,
+        subtitle: this.data.stories_subtitle,
+        stories: this.data.stories,
+      },
+      LikesData: {
+        title: this.data.likes_title,
+        hobbies: this.data.likes_hobbies,
+      },
+      ToolsData: {
+        title: this.data.tools_title,
+        subtitle: this.data.tools_subtitle,
+        windows: this.data.body,
+        logo_list: this.data.tools_logo_list,
+      },
+      PresentationData: {
+        title: this.data.who_title,
+        subtitle: this.data.who_subtitle,
+      },
+      CapitalGainData: {
+        you_for_me: {
+          title: this.data.you_for_me_title,
+          subtitle: this.data.you_for_me_subtitle,
+          card_title: this.data.you_for_me_card_title,
+          card_item: this.data.you_for_me_card_item,
+        },
+        me_for_you: {
+          title: this.data.me_for_you_title,
+          subtitle: this.data.me_for_you_subtitle,
+          card_title: this.data.me_for_you_card_title,
+          card_item: this.data.me_for_you_card_item,
+        },
+      },
+    }
   },
 
   mounted() {

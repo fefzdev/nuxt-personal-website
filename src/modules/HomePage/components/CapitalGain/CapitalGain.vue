@@ -2,32 +2,29 @@
   <section class="capital_gain blk_bgr">
     <div class="inner">
       <div
-        v-for="(element, elementIndex) in capitalElements"
+        v-for="(element, elementIndex) in data"
         :key="elementIndex"
         class="element"
       >
         <div class="desc fadeIn">
-          <h2>{{ element.title }}</h2>
-          <p
-            v-for="(description, descIndex) in element.descriptions"
-            :key="descIndex"
-            class="section_content"
-          >
-            {{ description }}
-          </p>
+          <h2>{{ element.title[0].text }}</h2>
+
+          <RichText :text-params="element.subtitle" class="section_content" />
         </div>
         <div class="view checkFadeIn">
           <div class="bgr" />
           <div class="content">
-            <h3>{{ element.subTitle }}</h3>
+            <Title :title-params="element.card_title" class="card_title" />
             <ul class="list">
               <li
-                v-for="(item, itemIndex) in element.list"
+                v-for="(item, itemIndex) in element.card_item"
                 :key="itemIndex"
-                :class="item.check ? 'need-check' : 'item--unchecked'"
+                :class="
+                  item.card_item_is_checked ? 'need-check' : 'item--unchecked'
+                "
                 class="item"
               >
-                {{ item.desc }}
+                {{ item.card_item_text }}
                 <span class="check">
                   <img
                     loading="lazy"
@@ -46,7 +43,22 @@
 </template>
 
 <script>
+import Title from '~/components/Title'
+import RichText from '~/components/RichText'
+
 export default {
+  components: {
+    Title,
+    RichText,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+
   data() {
     return {
       capitalElements: this.$t('capitalSection.elements'),
@@ -156,7 +168,7 @@ export default {
           padding: 35px;
         }
 
-        h3 {
+        .card_title {
           margin-bottom: 30px;
           padding-bottom: 30px;
           border-bottom: 1px solid #c4c4c440;
