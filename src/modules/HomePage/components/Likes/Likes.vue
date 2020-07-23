@@ -1,21 +1,22 @@
 <template>
   <section class="likes blk_bgr">
     <div class="inner">
-      <h2>{{ $t('likesSection.title') }}</h2>
+      <Title :title-params="data.title" class="title" />
       <div class="content">
         <article
-          v-for="(like, likeIndex) in likes"
+          v-for="(hobby, likeIndex) in data.hobbies"
           :key="likeIndex"
           class="element love_dev fadeIn"
         >
           <img
-            :src="require(`~/assets/images/icons/${like.image}.svg`)"
-            :alt="like.imageAlt"
+            :src="hobby.hobby_icon.url"
+            :alt="hobby.hobby_icon.alt"
             loading="lazy"
           />
-          <h3 class="h4">{{ like.title }}</h3>
-          <!-- eslint-disable-next-line -->
-          <p v-html="like.description" />
+          <h3 class="h4">
+            {{ hobby.hobby_title }}
+          </h3>
+          <p>{{ hobby.hobby_description }}</p>
         </article>
       </div>
     </div>
@@ -23,7 +24,20 @@
 </template>
 
 <script>
+import Title from '~/components/Title'
+
 export default {
+  components: {
+    Title,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+
   data() {
     return {
       likes: this.$t('likesSection.likes'),
@@ -34,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .likes {
-  h2 {
+  .title {
     margin-bottom: 80px;
   }
   .content {

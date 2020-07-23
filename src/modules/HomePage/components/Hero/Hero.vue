@@ -2,23 +2,34 @@
   <section class="hero">
     <div class="inner--hero">
       <p lang="en">
-        {{ $t('heroSection.hello') }}
+        {{ data.hello }}
       </p>
-      <h1 class="title">
-        {{ $t('heroSection.title') }}
-      </h1>
+      <Title :title-params="data.title" class="title" />
       <p class="desc">
-        {{ $t('heroSection.description') }}
+        {{ data.subtitle }}
       </p>
       <p lang="en">
-        {{ $t('heroSection.intro') }}
+        {{ data.end_word }}
       </p>
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+import Title from '~/components/Title'
+
+export default {
+  components: {
+    Title,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -62,11 +73,14 @@ export default {}
     }
 
     .title {
-      width: 90%;
-      max-width: 1000px;
       margin-bottom: 40px;
 
-      line-height: 1.1em;
+      h1 {
+        width: 90%;
+        max-width: 1000px;
+
+        line-height: 1.1em;
+      }
     }
   }
 }

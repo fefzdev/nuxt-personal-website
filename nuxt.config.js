@@ -5,7 +5,7 @@ export default {
 
   // Create external ip server
   server: {
-    host: '0'
+    host: '0',
   },
 
   /*
@@ -54,6 +54,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [],
+
   /*
    ** Nuxt.js dev-modules
    */
@@ -83,35 +84,14 @@ export default {
         langDir: 'locales/',
         strategy: 'prefix_and_default', // 'prefix_and_default', // add locale prefix for every locale
       },
-      [
-        'nuxt-lazy-load',
-        {
-          // These are the default values
-          images: true,
-          videos: true,
-          audios: true,
-          iframes: true,
-          polyfill: true,
-          directiveOnly: false,
-
-          // Default image must be in the static folder
-          defaultImage: '/images/default-image.jpg',
-
-          // To remove class set value to false
-          loadedClass: 'isLoaded',
-          appendClass: 'lazyLoad',
-
-          observerConfig: {
-            rootMargin: '50px 0px 50px 0px',
-            threshold: 0,
-            // See IntersectionObserver documentation
-          },
-        },
-      ],
     ],
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/prismic',
   ],
+
+  prismic: {
+    endpoint: 'https://felixbouveret.cdn.prismic.io/api/v2',
+  },
+
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

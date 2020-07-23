@@ -2,35 +2,30 @@
   <section class="story blk_bgr">
     <div class="inner">
       <div class="intro">
-        <h2>
-          {{ $t('storiesSection.title') }}
-        </h2>
+        <Title :title-params="data.title" class="title" />
+
         <p class="section-description fadeIn">
-          {{ $t('storiesSection.description') }}
+          {{ data.subtitle }}
         </p>
       </div>
       <div class="content">
         <div
-          v-for="(story, index) in stories"
+          v-for="(story, index) in data.stories"
           :key="index"
           class="element fadeIn"
         >
           <div class="desc">
-            <h3>{{ story.title }}</h3>
-            <p
-              v-for="(paragraph, paraId) in story.content"
-              :key="paraId"
-              class="regular-text section_content"
-            >
-              {{ paragraph }}
-            </p>
+            <Title :title-params="story.story_title" class="story_title" />
+
+            <RichText
+              :text-params="story.story_description"
+              class="regular-text"
+            />
           </div>
           <div class="view">
             <img
-              :src="
-                require(`~/assets/images/illustrations/${story.illustration}.png`)
-              "
-              :alt="story.altIllustration"
+              :src="story.story_image.url"
+              :alt="story.story_image.alt"
               loading="lazy"
             />
           </div>
@@ -41,7 +36,22 @@
 </template>
 
 <script>
+import Title from '~/components/Title'
+import RichText from '~/components/RichText'
+
 export default {
+  components: {
+    Title,
+    RichText,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+
   data() {
     return {
       stories: this.$t('storiesSection.stories'),
@@ -56,10 +66,10 @@ export default {
     max-width: 850px;
     margin: auto;
     margin-bottom: 130px;
+  }
 
-    h2 {
-      margin-bottom: 42px;
-    }
+  .title {
+    margin-bottom: 42px;
   }
 
   .content {
@@ -71,12 +81,6 @@ export default {
 
       @media only screen and (min-width: 1px) and (max-width: 900px) {
         flex-direction: column !important;
-      }
-
-      &.jocus .view img,
-      &.ipika .view img {
-        width: 80%;
-        margin: auto;
       }
 
       &:nth-child(2n) {
@@ -95,22 +99,13 @@ export default {
           margin-bottom: 30px;
         }
 
-        h3 {
+        .story_title {
           width: 85%;
           margin-bottom: 30px;
         }
 
-        p {
-          margin-bottom: 30px;
-
-          font-size: 1.5em;
-          line-height: 1.48em;
-
-          opacity: 0.7;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+        .regular-text {
+          color: #b2b2b2;
         }
       }
       .view {

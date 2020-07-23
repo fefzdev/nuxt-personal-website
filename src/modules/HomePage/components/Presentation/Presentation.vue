@@ -1,31 +1,33 @@
 <template>
   <section class="presentation wht_bgr">
     <div class="inner">
-      <h2>{{ $t('presentSection.title') }}</h2>
-      <div class="fadeIn">
-        <p class="section_desc">
-          {{ $t('presentSection.description') }}
-        </p>
-      </div>
+      <Title :title-params="data.title" class="title" />
+      <RichText :text-params="data.subtitle" class="fadeIn section_desc" />
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+import Title from '~/components/Title'
+import RichText from '~/components/RichText'
+
+export default {
+  components: {
+    Title,
+    RichText,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-h2 {
+.title {
   margin-bottom: 42px;
-}
-.presentation {
-  .section_desc {
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
 }
 </style>

@@ -2,15 +2,15 @@
   <section class="uses blk_bgr">
     <div class="inner">
       <div class="intro">
-        <h2>{{ $t('usesSection.title') }}</h2>
+        <Title :title-params="data.title" class="title" />
         <p class="section_desc fadeIn">
-          {{ $t('usesSection.description') }}
+          {{ data.subtitle }}
         </p>
       </div>
       <div class="content">
         <div class="windows_container">
           <div
-            v-for="(window, windowIndex) in windows"
+            v-for="(window, windowIndex) in data.windows"
             :key="windowIndex"
             class="window"
           >
@@ -20,7 +20,7 @@
                 <span />
                 <span />
               </div>
-              <p class="title">{{ window.title }}.html</p>
+              <p class="title">{{ window.primary.window_name }}.html</p>
             </div>
             <div class="content">
               <div class="lines">
@@ -30,21 +30,23 @@
               </div>
               <div class="text">
                 <span class="script_bls">script</span>
-                <p class="comments">//--------{{ window.title }}------------</p>
+                <p class="comments">
+                  //--------{{ window.primary.window_name }}------------
+                </p>
                 <div class="infos">
-                  <p><span>var </span>{{ window.title }}</p>
+                  <p><span>var </span>{{ window.primary.window_name }}</p>
                   <ul class="info_list">
                     <li
-                      v-for="(item, itemIndex) in window.list"
+                      v-for="(item, itemIndex) in window.items"
                       :key="itemIndex"
                       class="item"
                     >
-                      '{{ item }}'
+                      '{{ item.window_item }}'
                     </li>
                   </ul>
                 </div>
                 <p v-if="window.info" class="comments">
-                  {{ window.info }}
+                  {{ window.primary.window_comment }}
                 </p>
                 <span class="script_bls script_bls--close">script</span>
               </div>
@@ -55,13 +57,13 @@
         <div class="logos_container">
           <ul class="logo_list">
             <li
-              v-for="(logo, logoIndex) in logoList"
+              v-for="(logo, logoIndex) in data.logo_list"
               :key="logoIndex"
               class="item"
             >
               <img
-                :src="require(`~/assets/images/software_logos/${logo.image}`)"
-                :alt="logo.imageAlt"
+                :src="logo.tool_logo.url"
+                :alt="logo.tool_logo.alt"
                 loading="lazy"
                 class="item__img"
               />
@@ -74,26 +76,29 @@
 </template>
 
 <script>
+import Title from '~/components/Title'
+
 export default {
-  data() {
-    return {
-      windows: this.$t('usesSection.windows'),
-      logoList: this.$t('usesSection.logoList'),
-    }
+  components: {
+    Title,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.uses {
-  .intro {
-    h2 {
-      margin-bottom: 42px;
-    }
-    .section_desc {
-      margin-bottom: 50px;
-    }
-  }
+.title {
+  margin-bottom: 42px;
+}
+
+.section_desc {
+  margin-bottom: 50px;
 }
 
 .windows_container {

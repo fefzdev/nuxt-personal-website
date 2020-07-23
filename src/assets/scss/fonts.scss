@@ -1,20 +1,20 @@
 @font-face {
   font-weight: 400;
-  font-family: 'SF-Pro-Display';
-  src: url('/SF-Pro/SF-Pro-Display-Regular.otf');
+  font-family: "SF-Pro-Display";
+  src: url("/SF-Pro/SF-Pro-Display-Regular.otf");
   font-display: swap;
 }
 @font-face {
   font-weight: bold;
-  font-family: 'SF-Pro-Display';
-  src: url('/SF-Pro/SF-Pro-Display-Bold.otf');
+  font-family: "SF-Pro-Display";
+  src: url("/SF-Pro/SF-Pro-Display-Bold.otf");
   font-display: swap;
 }
 @font-face {
   font-weight: 400;
-  font-family: 'SF-Pro-Display';
+  font-family: "SF-Pro-Display";
   font-style: italic;
-  src: url('/SF-Pro/SF-Pro-Display-RegularItalic.otf');
+  src: url("/SF-Pro/SF-Pro-Display-RegularItalic.otf");
   font-display: swap;
 }
 
@@ -42,7 +42,8 @@ h3,
   font-size: 2em;
 }
 h4,
-.h4 {
+.h4,
+.h4 > * {
   font-size: 1.5em;
 }
 

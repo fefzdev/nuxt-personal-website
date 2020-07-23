@@ -38,7 +38,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 
-  font-family: 'SF-Pro-Display', sans-serif;
+  font-family: "SF-Pro-Display", sans-serif;
 
   background-color: #f6f6f6;
 }
@@ -64,7 +64,7 @@ section:last-child {
   transition: opacity ease 0.8s;
 }
 
-p.section_desc {
+.section_desc {
   width: 100%;
   max-width: 850px;
   margin: auto;
@@ -74,7 +74,7 @@ p.section_desc {
   text-align: center;
 }
 
-p.section_content {
+.section_content {
   font-size: 1.5em;
 }
 
